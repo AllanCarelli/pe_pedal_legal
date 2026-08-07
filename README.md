@@ -8,3 +8,4 @@ O objetivo principal desse quiz é ser apresentado em uma feira escolar.
 - Thales Suzuki
 - Lucas Crespo
 - Paulo Henrique
+- Gabriel Henrique
