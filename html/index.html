@@ -1,6 +1,8 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio da Natureza</title>
+    <link rel="icon" type="image/x-icon" href="../assets/icon.png">
 </head>
 <body>
     <div id="startScreen" style="display: block;">
@@ -10,9 +12,15 @@
             <li>Não tem limite de tempo</li>
             <input id="startQuestion" type="button" value="Começar">
     </div>
+
     <div id="quizScreen" style="display: none;">
-        <h1>Pergunta</h1>
+        <h id="pergunta"></h>
+        <input type="radio" name="" id="resp1">
+        <input type="radio" name="" id="resp2">
+        <input type="radio" name="" id="resp3">
+        <input type="radio" name="" id="resp4">
     </div>
+
     <div id="endScreen" style="display: none;">
         <h1 id="endmsg">Placeholder</h1>
     </div>
