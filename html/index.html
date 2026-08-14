@@ -3,6 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafio da Natureza</title>
     <link rel="icon" type="image/x-icon" href="../assets/icon.png">
+    <link rel="stylesheet" href="../lindinho.css">
 </head>
 <body>
     <div id="startScreen" style="display: block;">
@@ -15,19 +16,20 @@
 
     <div id="quizScreen" style="display: none;">
         <h id="pergunta"></h><br>
-        <input type="radio" name="" id="resp1">
+        <input type="radio" name="resp" id="resp1">
         <label id="resp1txt" for="resp1"></label><br>
-        <input type="radio" name="" id="resp2">
+        <input type="radio" name="resp" id="resp2">
         <label id="resp2txt" for="resp2"></label><br>
-        <input type="radio" name="" id="resp3">
+        <input type="radio" name="resp" id="resp3">
           <label id="resp3txt" for="resp3"></label><br>
-        <input type="radio" name="" id="resp4">
+        <input type="radio" name="resp" id="resp4">
           <label id="resp4txt" for="resp4"></label><br>
         <input type="button" id="next" value="proxima pergunta">
     </div>
 
     <div id="endScreen" style="display: none;">
         <h1 id="endmsg">Placeholder</h1>
+        <p id="resultado"></p>
     </div>
     <script src="../scripts/script.js"></script>
 </body>
