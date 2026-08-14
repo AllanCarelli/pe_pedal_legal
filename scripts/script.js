@@ -21,7 +21,7 @@ const end = document.getElementById("endScreen");
 let totalQuestions = 10;
 
 function atualizarRespostas(currentQ){
-  pergunta.innerHTML = questao[currentQ]["q"];
+  pergunta.innerHTML = `Questão ${currentQ + 1} - ${questao[currentQ]["q"]}`;
   res1.innerHTML = questao[currentQ]["opts"][0];
   res2.innerHTML = questao[currentQ]["opts"][1];
   res3.innerHTML = questao[currentQ]["opts"][2];
@@ -90,12 +90,9 @@ function shuffle(arr) {
   while (ar.includes(rand)){
     rand = Math.floor(Math.random(0,10) * 10)
   }
-  alert(ar)
-  alert(ar.includes(rand))
   ar.push(rand)
  const j = rand;
  [arr[i], arr[j]] = [arr[j], arr[i]];
- alert(`${j}`)
  }
  return arr;
 }
@@ -127,7 +124,6 @@ botao.addEventListener("click", function() {
 
 proxima.addEventListener("click", function(){
   let selected = document.querySelector('input[name="resp"]:checked')?.value || null;
-  alert(currentQ)
   if (currentQ >= 10){
     quiz.style.display = "none";
     end.style.display = "block";
@@ -135,6 +131,9 @@ proxima.addEventListener("click", function(){
   }
   if(respCorreta(selected,currentQ,questao[currentQ]["ans"])){
     score += 1;
+    alert("Você acertou ✔")
+  } else {
+    alert("Você errou 🤣")
   }
   currentQ += 1;
   atualizarRespostas(currentQ)
