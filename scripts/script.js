@@ -124,11 +124,6 @@ botao.addEventListener("click", function() {
 
 proxima.addEventListener("click", function(){
   let selected = document.querySelector('input[name="resp"]:checked')?.value || null;
-  if (currentQ >= 10){
-    quiz.style.display = "none";
-    end.style.display = "block";
-    document.getElementById("resultado").innerHTML = `texot: ${score}`;
-  }
   if(respCorreta(selected,currentQ,questao[currentQ]["ans"])){
     score += 1;
     alert("Você acertou ✔")
@@ -136,6 +131,11 @@ proxima.addEventListener("click", function(){
     alert("Você errou 🤣")
   }
   currentQ += 1;
+  if (currentQ >= 10){
+    quiz.style.display = "none";
+    end.style.display = "block";
+    document.getElementById("resultado").innerHTML = `resultado: ${score}`;
+  }
   atualizarRespostas(currentQ)
 
 })
