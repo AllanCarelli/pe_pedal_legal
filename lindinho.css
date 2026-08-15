@@ -1,71 +1,101 @@
 body {
-  background-color: #2c702c;
+  background: linear-gradient(135deg, #0f172a, #1e8a85, #2e7581);
 }
 
 div{
     width: 800px;
-    border: 15px solid rgb(110, 231, 73);
+    border: 5px solid rgb(0, 0, 0);
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
     padding: 200px;
     margin: auto;
-    height:200px;
+    height:400px;
     justify-content: auto;
     text-align: center;
     align-content: center;
-    
+ background: linear-gradient(135deg, #0f172a, #1e8a85, #2e7581);
     
     
 }
 input{
- font-family: "Lucida Handwriting", "Courier New", cursive;
-color: rgb(182, 0, 238);
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
+color: rgb(17, 0, 255);
 
 }
  h1{
- font-family: "Lucida Console", "Courier New", monospace;
-
+ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
+color: white
 
 }
-#startQuestion {
-
-  background-color: #000000;
- padding: 10px 10px;
- border-radius: 45%;
-cursor: pointer;
-}
+#startQuestion,
 #next {
-background-image: radial-gradient(circle,#ffffff,#030303);
-padding: 10px 10px;
- border-radius: 45%;
+
+background: linear-gradient(135deg, #0f172a, #00ff9d, #00ff73);
+padding: 15px 35px;
+border-radius: 12px;
 cursor: pointer;
-
+border: none;
+box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+transition: 0.3s;
+margin-top: 30px;
 }
 
-#resp1txt {
- color: white;
 
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-#resp2txt{
-  color: white;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+#startQuestion:hover,
+#next:hover {
+    transform: translateY(-4px);
 
+    box-shadow: 0 12px 25px rgba(124, 58, 237, 0.5);
 }
-#resp3txt{
-  color: white;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
 
-}
-#resp4txt{
-  color: white;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
-  grid-area: auto;  
+
+#startQuestion:active,
+#next:active {
+    transform: scale(0.5);
 }
 
 #pergunta {
-  background-color: rgb(255, 202, 28);
-  font-size: 35px;
+  color: white;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
+  display: block;
+
+  margin-bottom: 30px;
+  padding: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+}
   
-  
+#startScreen,
+#quizScreen,
+#endScreen {
+width: 100%;
+max-width: 900px;
+min-height: 450px;
+height: 100%;
+max-height: 600px;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
+background-color: rgba(255, 255, 255, 0.1);
+border: 1px solid rgba(255, 255, 255, 0.2);
+border-radius: 25px;
+padding: 45px;
+text-align: center;
+box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+color: white;
+}
+
+#quizScreen label {
+  display: inline-block;
+  width: 85%;
+  padding: 15px;
+  margin: 8px 0 8px 10px;
+  text-align: left;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  cursor: pointer;
 
 }
