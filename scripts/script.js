@@ -42,7 +42,7 @@ const end = document.getElementById("endScreen");
 let totalQuestions = 10;
 
 function atualizarRespostas(currentQ){
-  pergunta.innerHTML = `Questão ${currentQ + 1} - ${questao[currentQ]["q"]}`;
+  pergunta.innerHTML = `Questão ${currentQ + 1} / ${totalQuestions} - ${questao[currentQ]["q"]}`;
   res1.innerHTML = questao[currentQ]["opts"][0];
   res2.innerHTML = questao[currentQ]["opts"][1];
   res3.innerHTML = questao[currentQ]["opts"][2];
@@ -198,7 +198,7 @@ proxima.addEventListener("click", function(){
   if (currentQ >= 10){
     quiz.style.display = "none";
     end.style.display = "block";
-    document.getElementById("resultado").innerHTML = `resultado: ${score}`;
+    document.getElementById("resultado").innerHTML = `Resultado: ${score}`;
   }
   atualizarRespostas(currentQ)
 
